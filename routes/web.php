@@ -1,7 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::get('/', function () {
-    return inertia('Home');
+    return Inertia::render('Home', ['name' => 'Sadboiz IT']);
+});
+
+//Route::inertia('/', 'Home');
+
+Route::get('/about', function () {
+    return Inertia::render('About/About');
 });
