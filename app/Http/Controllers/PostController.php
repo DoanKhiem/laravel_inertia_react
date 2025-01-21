@@ -46,7 +46,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return inertia('Show', ['post' => $post]);
     }
 
     /**
@@ -70,6 +70,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }

@@ -1,6 +1,6 @@
 // import Layout from "@/Layouts/Layout.jsx";
 
-import {Link} from "@inertiajs/react";
+import { Link } from '@inertiajs/react'
 
 export default function Home({ posts }) {
     console.log(posts)
@@ -15,7 +15,9 @@ export default function Home({ posts }) {
                             <span>Posted on: </span>
                             <span>{ new Date(post.created_at).toLocaleTimeString() }</span>
                         </div>
-                        <p>{post.body}</p>
+                        <p className="font-medium">{post.body}</p>
+
+                        <Link href={`/posts/${post.id}`} className="text-link">Read more...</Link>
                     </div>
                 ))}
             </div>
