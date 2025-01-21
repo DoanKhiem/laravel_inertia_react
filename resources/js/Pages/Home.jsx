@@ -27,6 +27,7 @@ export default function Home({ posts }) {
 
             <h1 className="title">Hello, Sadboiz IT</h1>
             { flashMessage && <div className="absolute top-24 right-6 bg-rose-500 p-2 rounded-md shadow-lg text-sm text-white">{flashMessage}</div> }
+            { flash.success && <div className="absolute top-24 right-6 bg-green-500 p-2 rounded-md shadow-lg text-sm text-white">{flash.success}</div> }
             <div>
                 {posts.data.map((post) => (
                     <div key={post.id} className='p-4 border-b'>
